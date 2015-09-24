@@ -49,9 +49,9 @@
             <%
                 String cedula = request.getParameter("modificar1");
                
-                if (cedula != null && (new vendedor().MostrarCliente(Integer.parseInt(cedula))) != null) {
+                if (cedula != null && (new vendedor().MostrarVendedor(Integer.parseInt(cedula))) != null) {
 
-                    datosPersonales_DTO vendedor = new vendedor().MostrarCliente(Integer.parseInt(cedula));
+                    datosPersonales_DTO vendedor = new vendedor().MostrarVendedor(Integer.parseInt(cedula));
             %>
 
             <form class="form-horizontal" role="form" action="vehiculo" method="post" >
@@ -68,7 +68,7 @@
                     <label class="col-sm-3 control-label">Apellido</label>
                     <div class="col-sm-9">
                         <input type="text" class="form-control" id="vehModelo" name="vehModelo"
-                               value="<%out.print(vendedor.getDatNombre());%>">
+                               value="<%out.print(vendedor.getDatApellido());%>">
                     </div>
                 </div>
 
@@ -87,6 +87,7 @@
                     <div class="col-sm-offset-2 col-sm-9">
                         <button type="submit" class="btn btn-success">Volver</button>
                     </div>
+                    <%  } %>
                 </div>
                 <div class="form-group">
                 </div>

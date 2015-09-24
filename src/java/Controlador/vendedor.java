@@ -56,7 +56,7 @@ public class vendedor extends HttpServlet {
             
         }  
     }   
-     public datosPersonales_DTO MostrarCliente(int cedula) throws SQLException, Exception {
+     public datosPersonales_DTO MostrarVendedor(int cedula) throws SQLException, Exception {
         return vendedor_DAO.ConsultarUnaCedula(cedula);
         }
     
